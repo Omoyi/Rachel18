@@ -19,30 +19,40 @@ h1 {
     padding-bottom: 5%;
 
 }
-#f {
-    position: fixed;
-    background-image: url(http://www.woolfforcongress.com/wp-content/uploads/2015/08/Big-Canvas-Painting-Ideas.jpg);
+
+.startingPage {
+    background-image: url("../image/office.jpg");
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size:contain;
-}
-#2{
+    background-size: contain;
+} 
+
+#2 {
     color: white;
     background-color: black;
 }
 #a, #duo {
     text-align: center;
 }
-#b {
+#about {
     background-color: darkgrey;
-    color:rgb(20, 20, 20);
-    
+    color:rgb(20, 20, 20); 
     text-align: center;
 }
 #duo{
     font-size: 22px;
     width: 100%;
-    background-color: rgb(20, 20, 20);
+    background-color:white(20, 20, 20);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
+
+#duo:hover{
+  -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+}
+
 #c{
     background-color: beige;
 }
@@ -75,14 +85,16 @@ li a {
     position: relative;
     display: block;
     text-align: center;
-    padding: 14px 16px;
-    color: white;
+    padding: 14px 18px;
+    color: rgb(3, 80, 80);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 15px;
 }
 li a:hover {
-    color: darkslategray;
+    color: rgb(2, 29, 54);
+    text-decoration: none;
+    font-size: 17px;
 }
 main {
     display: flex;
@@ -199,4 +211,63 @@ div {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+.thegallery {
+  text-align: center;
+  margin-top: 95px;
+}
+
+.polaroid-gallery-title {
+  font-size: 32px;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+
+.polaroid-card {
+  display: inline-block;
+  background-color: #eee6d8;
+  padding: 30px;
+  margin: 60px;
+  box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, 0.7);
+}
+
+.polaroid-card-caption {
+  text-align: center;
+  font-family: "Marker Felt",sans-serif;
+  font-size: 12px;
+  margin-top: 6px;
+  letter-spacing: 2px;
+}
+
+.polaroid-card:nth-of-type(even) {
+  transform: rotate(12deg);
+}
+
+.polaroid-card:nth-of-type(odd) {
+  transform: rotate(-12deg);
+}
+
+.polaroid-card:nth-of-type(even)::before {
+  content: '';
+  display: block;
+  background-color: rgba(222, 220, 200, 0.66);
+  width: 100px;
+  height: 25px;
+  transform: rotate(-24deg) translate(-30px, -25px);
+}
+
+.polaroid-card:nth-of-type(odd)::before {
+  content: '';
+  display: block;
+  background-color: rgba(222, 220, 200, 0.66);
+  width: 100px;
+  height: 45px;
+  transform: translate(140px, -5px) rotate(25deg);
+}
+
+.polaroid-card:hover {
+  transform: scale(1.5);
 }
