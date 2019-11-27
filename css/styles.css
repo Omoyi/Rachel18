@@ -5,6 +5,7 @@ th, td {
     padding: 15px;
     text-align: left;
 }
+
 table#one tr:nth-child(even) {
     background-color: beige;
 }
@@ -19,7 +20,9 @@ h1 {
     padding-bottom: 5%;
 
 }
-
+body {
+  background-color: rgb(3, 1, 19);
+}
 .startingPage {
     background-image: url("../image/office.jpg");
     background-attachment: fixed;
@@ -42,15 +45,10 @@ h1 {
 #duo{
     font-size: 22px;
     width: 100%;
-    background-color:white(20, 20, 20);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color:rgb(1, 0, 8);
+    padding: 44px;
+    letter-spacing: 3px;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-#duo:hover{
-  -moz-box-shadow:    inset 0 0 10px #000000;
-   -webkit-box-shadow: inset 0 0 10px #000000;
-   box-shadow:         inset 0 0 10px #000000;
 }
 
 #c{
@@ -70,32 +68,67 @@ h5{
    text-align: center;
 }
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    text-align: center;
-  }
-li {
-    float: left;
-  }
-li a {
-    position: relative;
-    display: block;
-    text-align: center;
-    padding: 14px 18px;
-    color: rgb(3, 80, 80);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 15px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-li a:hover {
-    color: rgb(2, 29, 54);
-    text-decoration: none;
-    font-size: 17px;
+
+ul li {
+  list-style: none;
+  margin: 0 15px;
 }
+
+ul li a {
+  position: relative; 
+    position: relative;
+  position: relative; 
+    position: relative;
+  position: relative; 
+    position: relative;
+  position: relative; 
+    position: relative;
+  position: relative; 
+  display: block;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 63px;
+  background: rgb(6, 17, 32);
+  border-radius: 50%;
+  font-size: 30px;
+  color: rgb(245, 238, 238);
+  transition: .5s;
+}
+
+ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffee10;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+
+ul li a:hover {
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+
 main {
     display: flex;
     justify-content: stretch;
@@ -119,6 +152,18 @@ h2 {
 }
 .metoo {
     border-radius: 50%;
+}
+.sidepan img {
+  margin-left: 0px;
+  -webkit-transition: margin 1s ease;
+     -moz-transition: margin 1s ease;
+       -o-transition: margin 1s ease;
+      -ms-transition: margin 1s ease;
+          transition: margin 1s ease;
+}
+ 
+.sidepan img:hover {
+  margin-left: -200px;
 }
 div.gallery {
     border: 1px solid #ccc;
@@ -192,8 +237,8 @@ div {
 }
 .rachel {
     display: flex;
-  flex-direction: row;
-  background-color: white;
+    flex-direction: row;
+    background-color: white;
 }
 .rachel> div {
      background-color: darkgray;
@@ -213,61 +258,302 @@ div {
     width: 50%;
 }
 
-.thegallery {
-  text-align: center;
-  margin-top: 95px;
+
+/* the project*/
+
+#project {
+  background-color: rgb(216, 224, 227);
+  padding: 25px;
+  font-family: sans-serif;
 }
 
-.polaroid-gallery-title {
-  font-size: 32px;
-  text-align: center;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color: #333;
+
+
+
+.myClass {
+  width: 350px;
+  height: 550px;
+  background: white;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0;
+  -webkit-transform: scale(0.95);
+     -moz-transform: scale(0.95);
+       -o-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: box-shadow 0.5s, -webkit-transform 0.5s;
+  transition: box-shadow 0.5s, -webkit-transform 0.5s;
+  -o-transition: box-shadow 0.5s, -o-transform 0.5s;
+  -moz-transition: box-shadow 0.5s, transform 0.5s, -moz-transform 0.5s;
+  transition: box-shadow 0.5s, transform 0.5s;
+  transition: box-shadow 0.5s, transform 0.5s, -webkit-transform 0.5s, -moz-transform 0.5s, -o-transform 0.5s;
 }
 
-.polaroid-card {
-  display: inline-block;
-  background-color: #eee6d8;
-  padding: 30px;
-  margin: 60px;
-  box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, 0.7);
+.myClass:hover {
+  -webkit-transform: scale(1);
+     -moz-transform: scale(1);
+       -o-transform: scale(1);
+          transform: scale(1);
+  box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
 }
 
-.polaroid-card-caption {
-  text-align: center;
-  font-family: "Marker Felt",sans-serif;
-  font-size: 12px;
-  margin-top: 6px;
-  letter-spacing: 2px;
+.myClass .container {
+  width: 100%;
+  height: 100%;
 }
 
-.polaroid-card:nth-of-type(even) {
-  transform: rotate(12deg);
+.myClass .container .top {
+  height: 80%;
+  width: 100%;
+  background: url(../image/pizza.png)no-repeat center center;
+  background-size: 100%;
+}
+.top1, .top2, .top3, .top4, .top5, .top6, .top7 {
+  height: 80%;
+  width: 100%;
+  
 }
 
-.polaroid-card:nth-of-type(odd) {
-  transform: rotate(-12deg);
+.top1 {
+  background: url(../image/quotes.png)no-repeat center center;
+}
+.top2 {
+  background: url(../image/luxuries.png)no-repeat center center;
+}
+.top3 {
+  background: url(../image/wildlife.png)no-repeat center center;
+}
+.top4 {
+  background: url(../image/birth.png)no-repeat center center;
+}
+.top5 {
+  background: url(../image/paint.png)no-repeat center center;
+}
+.top6 {
+  background: url(../image/github.png)no-repeat center center;
+}
+.top7 {
+  background: url(../image/icecream.png)no-repeat center center;
 }
 
-.polaroid-card:nth-of-type(even)::before {
-  content: '';
+.myClass .container .bottom {
+  width: 200%;
+  height: 20%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+  -moz-transition: transform 0.5s, -moz-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s, -moz-transform 0.5s, -o-transform 0.5s;
+}
+
+.myClass .container .bottom.clicked {
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.myClass .container .bottom h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.myClass .container .bottom p {
+  margin: 0;
+  padding: 0;
+}
+
+.myClass .container .bottom .left {
+  height: 100%;
+  width: 50%;
+  position: relative;
+  float: left;
+}
+
+.myClass .container .bottom .left .details {
+  padding: 0;
+  float: left;
+  width: -webkit-calc(70% - 30px);
+  width: -moz-calc(70% - 30px);
+  width: calc(70% - 30px);
+}
+
+.myClass .container .bottom .left .buy {
+  float: right;
+  width: -webkit-calc(30% - 5px);
+  width: -moz-calc(30% - 5px);
+  width: calc(30% - 5px);
+  height: 100%;
+  -webkit-transition:  0.5s;
+  -o-transition:  0.5s;
+  -moz-transition:  0.5s;
+  transition:  0.5s;
+}
+
+.myClass .container .bottom .left .buy i {
+  font-size: 30px;
+  padding: 0;
+  margin-bottom: 50px;
+  color: #254053;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+  -moz-transition: transform 0.5s, -moz-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s, -moz-transform 0.5s, -o-transform 0.5s;
+}
+
+.myClass .inside {
+  z-index: 9;
+  background: #92879B;
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  border-radius: 0px 0px 200px 200px;
+  -webkit-transition: all 0.5s, border-radius 2s, top 1s;
+  -o-transition: all 0.5s, border-radius 2s, top 1s;
+  -moz-transition: all 0.5s, border-radius 2s, top 1s;
+  transition: all 0.5s, border-radius 2s, top 1s;
+  overflow: hidden;
+}
+
+.myClass .inside .icon {
+  position: absolute;
+  right: 65px;
+  top: 65px;
+  color: white;
+  opacity: 1;
+}
+
+.myClass .inside:hover {
+  width: 100%;
+  right: 0;
+  top: 0;
+  border-radius: 0;
+  height: 80%;
+}
+
+.myClass .inside:hover .icon {
+  opacity: 0;
+  right: 15px;
+  top: 15px;
+}
+
+.myClass .inside:hover .contents {
+  opacity: 1;
+  -webkit-transform: scale(1);
+     -moz-transform: scale(1);
+       -o-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform: translateY(0);
+     -moz-transform: translateY(0);
+       -o-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.myClass .inside .contents {
+  padding: 5%;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+     -moz-transform: scale(0.5);
+       -o-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-transform: translateY(-200%);
+     -moz-transform: translateY(-200%);
+       -o-transform: translateY(-200%);
+          transform: translateY(-200%);
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.8s;
+  transition: opacity 0.2s, -webkit-transform 0.8s;
+  -o-transition: opacity 0.2s, -o-transform 0.8s;
+  -moz-transition: opacity 0.2s, transform 0.8s, -moz-transform 0.8s;
+  transition: opacity 0.2s, transform 0.8s;
+  transition: opacity 0.2s, transform 0.8s, -webkit-transform 0.8s, -moz-transform 0.8s, -o-transform 0.8s;
+}
+
+.myClass .inside .contents table {
+  text-align: left;
+  width: 100%;
+}
+
+.myClass .inside .contents h1, .myClass .inside .contents p, .myClass .inside .contents table {
+  color: white;
+}
+
+.myClass .inside .contents p {
+  font-size: 13px;
+}
+
+
+
+
+/* 
+.badge {
   display: block;
-  background-color: rgba(222, 220, 200, 0.66);
-  width: 100px;
-  height: 25px;
-  transform: rotate(-24deg) translate(-30px, -25px);
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  cursor: pointer;
+  background: url(../image/wildlife.png) no-repeat 100% 50%;
+  background-size: 120%;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  -moz-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.75);
 }
 
-.polaroid-card:nth-of-type(odd)::before {
-  content: '';
+.badge:hover {
+  box-shadow: 0px 0.5rem 2rem rgba(0, 0, 0, 0.75);
+  background-position: 0% 50%;
+}
+
+.badge:hover .text {
+  -webkit-transform: rotate(-45deg) translate(0px) rotate(-315deg);
+     -moz-transform: rotate(-45deg) translate(0px) rotate(-315deg);
+       -o-transform: rotate(-45deg) translate(0px) rotate(-315deg);
+          transform: rotate(-45deg) translate(0px) rotate(-315deg);
+  background: rgba(102, 51, 153, 0.5);
+  width: 20rem;
+  letter-spacing: 1rem;
+  line-height: 20rem;
+  height: 20rem;
+  margin-top: -10rem;
+  margin-left: -10rem;
+  -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
+  -o-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
+  -moz-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
+}
+
+.badge .text {
   display: block;
-  background-color: rgba(222, 220, 200, 0.66);
-  width: 100px;
-  height: 45px;
-  transform: translate(140px, -5px) rotate(25deg);
-}
-
-.polaroid-card:hover {
-  transform: scale(1.5);
-}
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  line-height: 10rem;
+  left: 50%;
+  top: 50%;
+  margin-top: -5rem;
+  margin-left: -5rem;
+  font-size: 2rem;
+  font-family: Raleway, sans-serif;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  background: rebeccapurple;
+  -webkit-transform: rotate(-180deg) translate(-10rem) rotate(180deg);
+     -moz-transform: rotate(-180deg) translate(-10rem) rotate(180deg);
+       -o-transform: rotate(-180deg) translate(-10rem) rotate(180deg);
+          transform: rotate(-180deg) translate(-10rem) rotate(180deg);
+  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  -moz-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+} */
